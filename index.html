@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Pietro Romagnoli Muriggi Cruz">
+  <title>Pietro Romagnoli — Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <a class="logo" href="#inicio">PIETRO<span>.DEV</span></a>
+    <nav class="desktop-nav">
+      <a href="#sobre">SOBRE MIM</a><b>//</b><a href="#skills">SKILLS</a><b>//</b><a href="#portfolio">PORTFÓLIO</a><b>//</b>
+      <a class="contact-pill" href="#contato">ME CONTATE</a>
+      <button class="theme-button" id="themeButton" aria-label="Alternar tema"><span class="theme-icon" aria-hidden="true"></span></button>
+    </nav>
+    <div class="mobile-actions"><button class="theme-button" id="themeButtonMobile" aria-label="Alternar tema"><span class="theme-icon" aria-hidden="true"></span></button><button class="menu-button" id="menuButton">☰</button></div>
+    <nav class="mobile-nav" id="mobileNav"><a href="#sobre">SOBRE MIM</a><a href="#skills">SKILLS</a><a href="#portfolio">PORTFÓLIO</a><a href="#contato">ME CONTATE</a></nav>
+  </header>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="hello">Olá, me chamo</p>
+        <h1>Pietro Romagnoli<br>Muriggi Cruz</h1>
+        <h2><span id="typewriter"></span><span class="cursor">|</span></h2>
+        <div class="social-links"><a href="mailto:pietromuriggi@gmail.com" aria-label="Enviar e-mail"><svg class="email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7"/></svg></a><a href="https://github.com/pietro-ctrl" target="_blank" aria-label="GitHub"><img src="assets/icons/github.svg" alt="GitHub"></a><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">in</a></div>
+      </div>
+      <div class="hero-visual"><div class="profile-frame"><img src="assets/pietro-profile.jpg" alt="Foto de Pietro Romagnoli"><span class="profile-mark">PR</span></div><small>Desenvolvedor Front-End &amp; TI</small></div>
+    </section>
+
+    <section class="intro dark-section"><div class="content narrow"><h2>DESENVOLVEDOR<br>FRONT-END &amp; TI</h2><p>Desenvolvedor em formação técnica pelo Colégio Cotemig Floresta, apaixonado por tecnologia e resolução de problemas. Combinando lógica de programação em C# e banco de dados SQL com desenvolvimento web em HTML, CSS e JavaScript.</p><button class="text-button" id="aboutButton">| SAIBA MAIS |</button></div></section>
+
+    <section class="light-section" id="sobre"><div class="content"><h2 class="section-title">SOBRE MIM</h2><p class="center-text">Prazer, sou o Pietro Romagnoli! Tenho 16 anos, estudo TI no Cotemig e transformo ideias em software funcional.</p><p class="center-text">Transito com facilidade entre o Front-End (HTML, CSS, JavaScript) e o Back-End (C#, SQL), unindo lógica de programação com prototipação de interfaces no Figma.</p><p class="center-text">O que me move é resolver problemas reais com código limpo e eficiente.</p><button class="text-button" onclick="document.querySelector('#portfolio').scrollIntoView({behavior:'smooth'})">| EXPLORAR |</button><div class="divider">— ◇ —</div><div class="cards-3"><article><h3>◈ DESIGN &amp; UI/UX</h3><p>Prototipo interfaces funcionais e intuitivas no Figma, com navegação clara.</p></article><article><h3>&lt;/&gt; DESENVOLVIMENTO</h3><p>Transformo layouts em sites e sistemas completos, funcionais e responsivos.</p></article><article><h3>⚒ MANUTENÇÃO</h3><p>Corrijo bugs, otimizo código e implemento novas funcionalidades.</p></article></div></div></section>
+
+    <section class="light-section skills" id="skills"><div class="content"><h2 class="section-title">HARD SKILLS</h2><h3 class="sub-title">USANDO AGORA:</h3><div class="skill-grid" id="hardSkills"></div><h3 class="sub-title">PRETENDO APRENDER/APRENDENDO:</h3><div class="skill-grid four" id="learningSkills"></div><h3 class="sub-title">SOFT SKILLS:</h3><div class="skill-grid four soft"><div><img src="assets/flag-us.png" alt="Bandeira dos Estados Unidos"><b>INGLÊS</b><small>C1 / C2</small></div><div><img src="assets/flag-es.png" alt="Bandeira da Espanha"><b>ESPANHOL</b><small>A1/A2</small></div><div><img src="assets/icons/communication.svg" alt="Ícone de comunicação"><b>BOA COMUNICAÇÃO</b></div><div><img src="assets/icons/teamwork.svg" alt="Ícone de trabalho em equipe"><b>TRABALHO EM EQUIPE</b></div></div></div></section>
+
+    <section id="portfolio"><div class="portfolio-banner"><img src="assets/portfolio_landscape.png" alt="Paisagem de montanhas"><h2>PORTFÓLIO</h2></div><div class="projects dark-section"><div class="filters"><button class="active" data-filter="all">TODOS</button><button data-filter="web">WEB / FRONT-END</button><button data-filter="design">DESIGN</button></div><div class="project-grid" id="projectGrid"></div></div></section>
+
+    <section class="light-section contact" id="contato"><div class="content narrow"><h2 class="section-title">CONTATO</h2><p class="center-text">Escreva uma mensagem. O envio é apenas uma simulação para a atividade.</p><div class="divider">— ◇ —</div><form id="contactForm"><label>SEU NOME*<input name="nome" type="text" placeholder="Digite seu nome"></label><label>SEU E-MAIL*<input name="email" type="email" placeholder="Digite seu e-mail"></label><label>TELEFONE / WHATSAPP*<input name="telefone" id="telefone" type="tel" placeholder="(31) 98765-4321"></label><label>SUA MENSAGEM*<textarea name="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea></label><button class="text-button" type="submit">| ENVIAR |</button><p class="form-message" id="formMessage"></p></form></div></section>
+  </main>
+
+  <footer><button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo"><svg class="top-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6M6 20l6-6 6 6"/></svg><strong>VOLTAR AO TOPO</strong></button><div class="footer-links"><a href="https://github.com/pietro-ctrl">GitHub</a><a href="mailto:pietromuriggi@gmail.com">pietromuriggi@gmail.com</a></div><small>© 2026 Pietro Romagnoli Muriggi Cruz · Todos os direitos reservados.</small></footer>
+  <div class="modal" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose">×</button><h2>Sobre Pietro</h2><p>Estudante de TI, desenvolvedor Front-End em formação e interessado em UI/UX, C#, SQL e criação de interfaces responsivas.</p><button class="text-button" id="modalOk">| FECHAR |</button></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
